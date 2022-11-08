@@ -7,17 +7,17 @@ from LossyCodec import Decoder, Encoder
 
 q = 2
 
-# for i in range(24):
-#     name = str(i+1).zfill(2)
-#     print("正在处理[{}/{}]：".format(name, 24))
-#     img = Image.open("dataset/kodim{}.png".format(name))
+for i in range(24):
+    name = str(i+1).zfill(2)
+    print("正在处理[{}/{}]：".format(name, 24))
+    img = Image.open("dataset/kodim{}.png".format(name))
 
-#     encoder = Encoder()
-#     encoder.encode(img, "bin/kodim{}.bin".format(name), q)
+    encoder = Encoder()
+    encoder.encode(img, "bin/kodim{}.bin".format(name), q)
 
-#     decoder = Decoder()
-#     img = decoder.decode("bin/kodim{}.bin".format(name), q)
-#     img.save("res/kodim{}.bmp".format(name))
+    decoder = Decoder()
+    img = decoder.decode("bin/kodim{}.bin".format(name), q)
+    img.save("res/kodim{}.bmp".format(name))
 
 
 ratio = 0.
